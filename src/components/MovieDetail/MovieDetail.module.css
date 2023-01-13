@@ -1,0 +1,25 @@
+.Bg_control {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 500px;
+}
+
+.BackHome {
+    transition: all ease-in-out;
+}
+
+.BackHome:hover {
+    animation: toleft 1s infinite alternate;
+}
+
+@keyframes toleft {
+    from {
+
+    }
+    to {
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+    }
+}

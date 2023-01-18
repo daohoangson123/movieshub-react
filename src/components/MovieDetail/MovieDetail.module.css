@@ -6,20 +6,17 @@
     min-height: 500px;
 }
 
-.BackHome {
-    transition: all ease-in-out;
-}
-
 .BackHome:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
     animation: toleft 1s infinite alternate;
 }
 
 @keyframes toleft {
     from {
-
+        transform: translateX(0);
     }
     to {
-        background: rgba(255, 255, 255, 0.9);
-        color: black;
+        transform: translateX(-5px);
     }
 }

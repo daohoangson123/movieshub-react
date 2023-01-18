@@ -17,7 +17,9 @@ export default function Mobilemenu() {
                 <li className=' px-5 hover:bg-white hover:text-black '>
                     <Link to='/tvseries'>TV Series</Link>
                 </li>
-                <button type='button' className=' px-5 hover:bg-white hover:text-black '>Search</button>
+                <button type='button' className=' px-5 hover:bg-white hover:text-black '>
+                    Search
+                </button>
             </ul>
     </div>
   )

@@ -16,14 +16,14 @@ const handleOnclick = () => {
 }
 
   return (
-    <div className='Header items-center justify-between sm:justify-start flex gap-2 p-5 w-full bg-zinc-900 '>
+    <div className='Header items-center justify-between sm:justify-start flex gap-2 p-2 w-full bg-zinc-900 '>
         <div className='Logo font-black flex gap-2 p-2 '>
             <FaFilm className=' text-[2rem] text-orange-500 translate-y-[-3px] ' />
             MoviesHub
         </div>
         <nav className='Navbar font-medium '>
             <Navbar />
-        <button className=' sm:hidden p-5 hover:bg-white hover:text-black '
+        <button className=' sm:hidden p-4 hover:bg-white hover:text-black '
             onClick={handleOnclick}
         >
             Menu

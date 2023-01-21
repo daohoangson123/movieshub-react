@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function MovieItems({ id, title, titlesub, thumbnail}) {
+export default function MovieItems({ id, title, thumbnail}) {
   return (
     <div className='MovieItems '>
-        <div className='MovieThumbCtrl w-[250px] h-[400px] border-solid border-[1px] '
+        <div className='MovieThumbCtrl w-[200px] sm:w-[250px] h-[300px] sm:h-[350px] border-solid border-[1px] '
             style={{
                 background: `url("${thumbnail}")`,
                 backgroundPosition: "center",
@@ -12,14 +12,12 @@ export default function MovieItems({ id, title, titlesub, thumbnail}) {
                 backgroundRepeat: "no-repeat"}}
             >
         </div>
-        <div className=' h-[140px] text-center p-5 bg-white bg-opacity-10 '>
-            <div className=' text-[22px] font-bold '>
+        <div className=' w-[200px] sm:w-[250px] h-[120px] text-center bg-white bg-opacity-10 '>
+            <div className=' text-[20px] font-bold '>
                 {title}
-                <br />
-                {titlesub}
             </div>
             <br />
-            <button className=' hover:text-black hover:bg-gray-300'>
+            <button className=' font-semibold hover:text-black hover:bg-gray-300'>
                 <Link to={`/movies/${id}`}>
                     More Details...
                 </Link>

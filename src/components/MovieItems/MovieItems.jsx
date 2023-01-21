@@ -6,7 +6,7 @@ export default function MovieItems({ id, title, thumbnail}) {
     <div className='MovieItems '>
         <div className='MovieThumbCtrl w-[200px] sm:w-[250px] h-[300px] sm:h-[350px] border-solid border-[1px] '
             style={{
-                background: `url("${thumbnail}")`,
+                backgroundImage: `url("${thumbnail}")`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat"}}

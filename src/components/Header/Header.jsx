@@ -5,13 +5,13 @@ import Navbar from './Navbar';
 
 export default function Header() {
 
-const [mobilemenu, setMobilemenu] = useState("none")
+const [mobilemenu, setMobilemenu] = useState("none");
 
 const handleOnclick = () => {
     if(mobilemenu === "none"){
-        setMobilemenu("block")
+        setMobilemenu("grid");
     } else {
-        setMobilemenu("none")
+        setMobilemenu("none");
     }
 }
 

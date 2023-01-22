@@ -76,7 +76,6 @@ export default function MainSearch() {
                 onSubmit={handleOnsubmit}    >
                     <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required onChange={handleOnchange}
                     className=' px-3 min-w-[180px] w-[280px] h-[30px] text-black rounded placeholder-stone-500 '
-                    // onKeyDown={handleOnkeydown}
                     onKeyUp={handleOnkeyup}
                     />
                     <button type='button' className=' flex gap-2 hover:bg-white hover:bg-opacity-10 rounded p-2 '

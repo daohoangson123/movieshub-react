@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Movies_Data } from '../../../data/MoviesData/MoviesData';
+// import React, { useState } from 'react';
+import React from 'react';
+// import { Movies_Data } from '../../../data/MoviesData/MoviesData';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

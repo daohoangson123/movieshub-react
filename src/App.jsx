@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import MainHome from './components/Main/MainHome';
 import MainTrending from './components/Main/MainTrending';
-import Footer from './components/Footer/Footer';
-import MovieDetail from './components/MovieDetail/MovieDetail';
 import MainMovies from './components/Main/MainMovies';
 import MainSearch from './components/Main/MainSearch';
+import MovieDetail from './components/MovieDetail/MovieDetail';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

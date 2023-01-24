@@ -7,12 +7,12 @@ const MainMovies = () => {
 
   useEffect(() => {
     const movieDetailTemp = [];
-      for (let i = 0; i < Movies_Data.length; i++) {
-        if (Movies_Data[i].type === "movie") {
-            movieDetailTemp.push(Movies_Data[i]);
-            setMoviedetail([...movieDetailTemp]);
+      Movies_Data.find((movie) => {
+        if (movie.type === "movie") {
+          movieDetailTemp.push(movie);
         }
-      }
+          return setMoviedetail([...movieDetailTemp]);
+      });
   }, []);
   
   return (

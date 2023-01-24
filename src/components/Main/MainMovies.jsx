@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
-export default function MainMovies() {
+const MainMovies = () => {
+  const [moviedetail, setMoviedetail] = useState([]);
+
+  useEffect(() => {
+    const movieDetailTemp = [];
+      for (let i = 0; i < Movies_Data.length; i++) {
+        if (Movies_Data[i].type === "movie") {
+            movieDetailTemp.push(Movies_Data[i]);
+            setMoviedetail([...movieDetailTemp]);
+        }
+      }
+  }, []);
+  
   return (
     <div className='Main text-center overflow-hidden '>
         <div className='MoviesBox flex flex-wrap justify-center gap-5 p-5 '>
-            {Movies_Data.map((movie) => (
+            {moviedetail.map((movie, id) => (
               <MovieItems
-                key={movie.id}
+                key={id}
                 id={movie.id}
                 title={movie.title}
                 thumbnail={movie.thumbnail}
@@ -18,3 +30,5 @@ export default function MainMovies() {
     </div>
   )
 }
+
+export default MainMovies;

@@ -3,8 +3,8 @@ import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import { FaSearch } from 'react-icons/fa';
 import MovieItems from '../MovieItems/MovieItems';
 
-export default function MainSearch() {
-    const handleOnsubmit = (event) => {
+const MainSearch = () => {
+    const HandleOnSubmit = (event) => {
         event.preventDefault();
     }
 
@@ -14,7 +14,7 @@ export default function MainSearch() {
     
     const [res, Setres] = useState([]);
     
-    const handleOnchange = (event) => {
+    const HandleOnChange = (event) => {
         setSearchValue({
             [event.target.searchkw] : event.target.value,
         });
@@ -25,7 +25,7 @@ export default function MainSearch() {
         }
     }
 
-    const handleOnkeyup = (event) => {
+    const HandleOnKeyUp = (event) => {
         for (let i = 0; i < Movies_Data.length; i++) {
             if ((Object.values(searchValue)[0] === "")) {
                     Setres([
@@ -41,23 +41,20 @@ export default function MainSearch() {
                             res.push(Movies_Data[i]);
                             Setres([...res]);
                             // console.log("res", res);
-            } else {
-                
-            }
+                }
         }
     }
     
-    const handleOnclick = () => {
+    const HandleOnClick = () => {
         for (let i = 0; i < Movies_Data.length; i++) {
-        if((Object.values(searchValue)[0] === "")
-            ) {
+        if((Object.values(searchValue)[0] === "")) {
                 alert("please enter letters of movie name");
                 break;
             } else if (!(Movies_Data[i].searchname
                 .includes(Object.values(searchValue)[0]
                 .replace(/\s+/g, '')
                 .toLocaleLowerCase()))) {
-                alert("#404 no movie found");
+                alert("404! NOTHING FOUND");
                 break;
             }
         }
@@ -70,16 +67,16 @@ export default function MainSearch() {
     // console.log("resout", res);
     
     return (
-        <div className='search-result min-h-[70vh] '>
-            <form className=' m-2 flex gap-5 justify-center items-baseline '
+        <div className='MainSearch min-h-[70vh] '>
+            <form className='SearchForm m-2 flex gap-5 justify-center items-baseline '
                 action="" autoComplete='off'
-                onSubmit={handleOnsubmit}    >
-                    <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required onChange={handleOnchange}
-                    className=' px-3 min-w-[180px] w-[280px] h-[30px] text-black rounded placeholder-stone-500 '
-                    onKeyUp={handleOnkeyup}
+                onSubmit={HandleOnSubmit}    >
+                    <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required onChange={HandleOnChange}
+                    className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px] text-black rounded placeholder-stone-500 '
+                    onKeyUp={HandleOnKeyUp}
                     />
-                    <button type='button' className=' flex gap-2 hover:bg-white hover:bg-opacity-10 rounded p-2 '
-                    onClick={handleOnclick}
+                    <button type='button' className='MainSearchBtn flex gap-2 hover:bg-white hover:bg-opacity-10 rounded p-2 '
+                    onClick={HandleOnClick}
                     >
                         <FaSearch className=' text-[1.3rem] text-green-600 ' />
                         Search
@@ -88,8 +85,8 @@ export default function MainSearch() {
             <div className=' text-center '>
                 Just type some letters of movie' name, the results will be show below
             </div>
-            <hr className=' mx-auto my-2 w-[70%] border-orange-300 ' />
-            <div className='result flex flex-wrap justify-center gap-5 p-5 '>
+            <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
+            <div className='MainSearchItems flex flex-wrap justify-center gap-5 p-5 '>
                 {res.map((item, id) => (
                     <MovieItems
                     key={id}
@@ -102,3 +99,5 @@ export default function MainSearch() {
         </div>
     )
 }
+
+export default MainSearch;

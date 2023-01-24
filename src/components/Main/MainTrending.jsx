@@ -1,11 +1,13 @@
 import React from 'react'
 
-export default function MainTrending() {
+const MainTrending = () => {
   return (
     <div className='MainTrending '>
         <div>
-            TRENDING
+          incoming...
         </div>
     </div>
   )
 }
+
+export default MainTrending;

@@ -8,39 +8,19 @@ import MainSearch from './components/Main/MainSearch';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className='App relative bg-black text-white '>
+    <div className='App relative min-h-[100vh] bg-black text-white '>
       <div className='Header sticky top-0 z-50 '>
         <Header />
       </div>
-      <div className='Main '>
+      <div className='Main my-[30px] '>
         <Routes>
-          <Route path='/' element={
-            <>
-              <MainHome />
-            </>
-          } />
-          <Route path='/trending' element={
-            <>
-              <MainTrending />
-            </>
-          } />
-          <Route path='/movies' element={
-            <>
-              <MainMovies />
-            </>
-          } />
-          <Route path='/tvseries' element={
-            <>
-              tv
-            </>
-          } />
-          <Route path='/search' element={
-            <>
-              <MainSearch />
-            </>
-          } />
+          <Route path='/' element={<MainHome />} />
+          <Route path='/trending' element={<MainTrending />} />
+          <Route path='/movies' element={<MainMovies />} />
+          <Route path='/tvseries' element={''} />
+          <Route path='/search' element={<MainSearch />} />
           <Route path='/movies/:id' element={<MovieDetail />} />
         </Routes>
       </div>

@@ -26,23 +26,21 @@ const MainSearch = () => {
     }
 
     const HandleOnKeyUp = (event) => {
-        for (let i = 0; i < Movies_Data.length; i++) {
-            if ((Object.values(searchValue)[0] === "")) {
+        Movies_Data.filter((movie) => {
+            if (Object.values(searchValue)[0] === "") {
                     Setres([
                         ...Movies_Data
                     ]);
-                            break;
-            } else if ((event.key !== "Enter")
-                        && (Movies_Data[i].searchname
+                } else if ((event.key !== "Enter")
+                        && (movie.searchname
                         .includes(Object.values(searchValue)[0]
                         .replace(/\s+/g, '')
-                        .toLocaleLowerCase()))
-                        ) {
-                            res.push(Movies_Data[i]);
-                            Setres([...res]);
-                            // console.log("res", res);
-                }
-        }
+                        .toLocaleLowerCase()))) {
+                            res.push(movie);
+                            Setres([...res])
+                        }
+            return Setres;
+        });
     }
     
     const HandleOnClick = () => {

@@ -25,7 +25,7 @@ const MobileMenu = () => {
     <div>
         <ul className=' absolute top-[72px] right-0 grid sm:hidden bg-black bg-opacity-90 '>
             {MobilemenuItems.map((item) => (
-            <li className=' px-5 p-2 hover:bg-white hover:text-black '>
+            <li key={item.page} className=' px-5 p-2 hover:bg-white hover:text-black '>
                 <Link to={item.linkto}>{item.page}</Link>
             </li>    
             ))}

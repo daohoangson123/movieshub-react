@@ -7,12 +7,12 @@ const MainMovies = () => {
 
   useEffect(() => {
     const movieDetailTemp = [];
-      Movies_Data.find((movie) => {
+    Movies_Data.filter((movie) => {
         if (movie.type === "movie") {
           movieDetailTemp.push(movie);
         }
-          return setMoviedetail([...movieDetailTemp]);
-      });
+        return setMoviedetail([...movieDetailTemp]);
+    });
   }, []);
   
   return (

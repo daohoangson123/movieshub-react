@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import MainHome from './components/Main/MainHome';
 import MainTrending from './components/Main/MainTrending';
 import MainMovies from './components/Main/MainMovies';
+import MainTVes from './components/Main/MainTVs';
 import MainSearch from './components/Main/MainSearch';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
@@ -19,7 +20,7 @@ const App = () => {
           <Route path='/' element={<MainHome />} />
           <Route path='/trending' element={<MainTrending />} />
           <Route path='/movies' element={<MainMovies />} />
-          <Route path='/tvseries' element={''} />
+          <Route path='/tvseries' element={<MainTVes />} />
           <Route path='/search' element={<MainSearch />} />
           <Route path='/movies/:id' element={<MovieDetail />} />
         </Routes>

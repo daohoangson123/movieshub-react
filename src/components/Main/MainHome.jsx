@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
+import './MainHome.css'
 import style from './MainHome.module.css';
 
 const MainHome = () => {
   const [runningAd, setRunningAd] = useState(style.Title);
   return (
-    <div className='Main text-center overflow-hidden '>
+    <div className='MainHome text-center overflow-hidden '>
       <h2 className={[' inline-block text-[2rem] sm:text-[3rem] text-gray-800 ',`${runningAd}` ].join("")}
         onClick={() => {
           if(runningAd === style.Title) {
@@ -19,7 +20,7 @@ const MainHome = () => {
       </h2>
         <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
             {Movies_Data.map((movie, id) => (
-              <MovieItems
+              <MovieItems className='MovieItems '
                 key={id}
                 id={movie.id}
                 title={movie.title}

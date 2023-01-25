@@ -24,7 +24,8 @@ const MovieDetail = () => {
         <div className=' text-5xl text-yellow-300 text-center font-black py-5'>{moviedetail.title}</div>
         <div className=' flex flex-wrap gap-5 '>
           {/* <div className=' m-auto max-w-[45rem] min-w-[20rem] max-h-[50rem] min-h-[55rem] bg-center bg-no-repeat bg-contain sm:bg-cover basis-[65%] ' style={{ backgroundImage: `url("${moviedetail.thumbnail}")` }}></div> */}
-          <img className='MovieDetailImg m-auto sm:max-w-[300px] sm:max-h-[400px] border-solid border-[1px] ' src={moviedetail.thumbnail} alt={moviedetail.title} />
+          <img className='MovieDetailImg m-auto sm:max-w-[300px] min-h-[400px] sm:max-h-[450px] border-solid border-[1px] '
+            src={moviedetail.thumbnail} alt={moviedetail.title} />
           <div className='MovieDetailDescript mx-auto sm:basis-[70%] '>
             {moviedetail.descript}
             <br />

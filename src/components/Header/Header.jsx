@@ -5,13 +5,13 @@ import Navbar from './Navbar';
 
 export default function Header() {
 
-const [mobilemenu, setMobilemenu] = useState("none");
+const [mobilemenuvisible, setMobilemenuvisible] = useState("none");
 
 const handleOnclick = () => {
-    if(mobilemenu === "none"){
-        setMobilemenu("grid");
+    if(mobilemenuvisible === "none"){
+        setMobilemenuvisible("grid");
     } else {
-        setMobilemenu("none");
+        setMobilemenuvisible("none");
     }
 }
 
@@ -23,12 +23,12 @@ const handleOnclick = () => {
         </div>
         <nav className='Navbar font-medium '>
             <Navbar />
-        <button className=' sm:hidden p-4 hover:bg-white hover:text-black '
+        <button className='MenuBtn sm:hidden p-4 hover:bg-white hover:text-black '
             onClick={handleOnclick}
         >
             Menu
         </button>
-        <div style={{display: mobilemenu}}>
+        <div style={{display: mobilemenuvisible}}>
             <Mobilemenu />
         </div>
         </nav>

@@ -1,0 +1,11 @@
+.MoviesBox {
+    background: black;
+}
+
+.MovieItems:nth-child(odd) > .MovieTextsCtrl {
+    background: rgba(255, 255, 255, .1);
+}
+
+.MovieItems:nth-child(even) > .MovieTextsCtrl {
+    background: rgba(96, 159, 211, 0.5);
+}

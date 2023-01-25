@@ -19,51 +19,56 @@ const MainSearch = () => {
             [event.target.searchkw] : event.target.value,
         });
         
-        if ((Object.values(searchValue)[0] === "")
+        if ((Object.values(searchValue) === "")
                 || (Object.values(searchValue)[0] !== res)) {
                     Setres([]);
         }
     }
 
     const HandleOnKeyUp = (event) => {
-        Movies_Data.filter((movie) => {
+        for (let i = 0; i < Movies_Data.length; i++) {
             if (Object.values(searchValue)[0] === "") {
                     Setres([
                         ...Movies_Data
                     ]);
                 } else if ((event.key !== "Enter")
-                        && (movie.searchname
+                        &&
+                        (Movies_Data[i].title
+                        .replace(/\s+/g, '')
+                        .toLocaleLowerCase()
+
                         .includes(Object.values(searchValue)[0]
                         .replace(/\s+/g, '')
                         .toLocaleLowerCase()))) {
-                            res.push(movie);
+                            res.push(Movies_Data[i]);
                             Setres([...res])
                         }
-            return Setres;
-        });
+        };
     }
     
     const HandleOnClick = () => {
         for (let i = 0; i < Movies_Data.length; i++) {
-        if((Object.values(searchValue)[0] === "")) {
-                alert("please enter letters of movie name");
-                break;
-            } else if (!(Movies_Data[i].searchname
-                .includes(Object.values(searchValue)[0]
-                .replace(/\s+/g, '')
-                .toLocaleLowerCase()))) {
-                alert("404! NOTHING FOUND");
-                break;
+            if((Object.values(searchValue)[0] === "")) {
+                    alert("please enter letters of movie name");
+                    break;
+                } else if (
+                        !(Movies_Data[i].title
+                        .replace(/\s+/g, '')
+                        .toLocaleLowerCase()
+                        
+                        .includes(Object.values(searchValue)[0]
+                        .replace(/\s+/g, '')
+                        .toLocaleLowerCase()))) {
+                        alert("404! NOTHING FOUND");
+                        break;
+                }
             }
-        }
     }
 
     useEffect(() => {
         Setres([...Movies_Data])
     }, [])
 
-    // console.log("resout", res);
-    
     return (
         <div className='MainSearch min-h-[70vh] '>
             <form className='SearchForm m-2 flex gap-5 justify-center items-baseline '
@@ -81,7 +86,7 @@ const MainSearch = () => {
                     </button>
             </form>
             <div className=' text-center '>
-                Just type some letters of movie' name, the results will be show below
+                Try some letters/ words of movie's name, the results will be shown below instantly
             </div>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MainSearchItems flex flex-wrap justify-center gap-5 p-5 '>

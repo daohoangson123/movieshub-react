@@ -6,9 +6,9 @@
 
 @keyframes flow {
     from {
-        transform: translateX(-70vw);
+        transform: translateX(-90vw);
     }
     to {
-        transform: translateX(70vw);
+        transform: translateX(90vw);
     }
 }

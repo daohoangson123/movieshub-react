@@ -17,7 +17,7 @@ const MainTVes = () => {
   
   return (
     <div className='Main text-center overflow-hidden '>
-        <div className='TVMoviesBox flex flex-wrap justify-center gap-5 p-5 '>
+        <div className='TVMoviesBox flex flex-wrap justify-center gap-10 p-5 '>
             {tvdetail.map((tvitem, id) => (
               <MovieItems
                 key={id}

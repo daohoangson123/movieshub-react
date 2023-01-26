@@ -17,7 +17,7 @@ const MainMovies = () => {
   
   return (
     <div className='Main text-center overflow-hidden '>
-        <div className='MoviesBox flex flex-wrap justify-center gap-5 p-5 '>
+        <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
             {moviedetail.map((movie, id) => (
               <MovieItems
                 key={id}

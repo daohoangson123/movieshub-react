@@ -89,7 +89,7 @@ const MainSearch = () => {
                 Try some letters/ words of movie's name, the results will be shown below instantly
             </div>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
-            <div className='MainSearchItems flex flex-wrap justify-center gap-5 p-5 '>
+            <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
                 {res.map((item, id) => (
                     <MovieItems
                     key={id}

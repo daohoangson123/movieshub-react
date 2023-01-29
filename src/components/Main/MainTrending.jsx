@@ -4,7 +4,7 @@ const MainTrending = () => {
   return (
     <div className='MainTrending '>
         <div>
-          incoming...
+          Incoming...
         </div>
     </div>
   )

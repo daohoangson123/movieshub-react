@@ -18,7 +18,7 @@ const MovieItems = ({ id, title, thumbnail}) => {
               Rating: ...
             </div>
             <button className='MovieDetailLink font-semibold p-2 rounded-sm hover:text-black hover:bg-gray-300'>
-                <Link to={`/movies/${id}`}>
+                <Link to={`/watch/${id}`}>
                     Watch Now!
                 </Link>
             </button>

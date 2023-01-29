@@ -22,7 +22,7 @@ const App = () => {
           <Route path='/movies' element={<MainMovies />} />
           <Route path='/tvseries' element={<MainTVes />} />
           <Route path='/search' element={<MainSearch />} />
-          <Route path='/movies/:id' element={<MovieDetail />} />
+          <Route path='/watch/:id' element={<MovieDetail />} />
         </Routes>
       </div>
       <div className='Footer '>

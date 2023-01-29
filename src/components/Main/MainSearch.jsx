@@ -90,9 +90,9 @@ const MainSearch = () => {
             </div>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
-                {res.map((item, id) => (
+                {res.map((item) => (
                     <MovieItems
-                    key={id}
+                    key={item.id}
                     id={item.id}
                     title={item.title}
                     thumbnail={item.thumbnail}

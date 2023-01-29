@@ -29,8 +29,8 @@ export default function Footer() {
               MoviesHub
             </div>
             <ul className=' flex gap-5 '>
-              {FooterTopItems.map((item, id) => (
-                <Link to={item.linkto} key={id} className=' hover:underline '>
+              {FooterTopItems.map((item) => (
+                <Link to={item.linkto} key={item.title} className=' hover:underline '>
                   {item.title}
                 </Link>
               ))}

@@ -19,9 +19,9 @@ const MainHome = () => {
         >(Running Ads)/(click to stop)
       </h2>
         <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
-            {Movies_Data.map((movie, id) => (
+            {Movies_Data.map((movie) => (
               <MovieItems className='MovieItems '
-                key={id}
+                key={movie.id}
                 id={movie.id}
                 title={movie.title}
                 titlesub={movie.titlesub}

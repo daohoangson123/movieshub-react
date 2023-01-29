@@ -1,46 +1,20 @@
 import React from 'react';
-import { BiHome } from 'react-icons/bi';
-import { ImFilm } from 'react-icons/im';
-import { FaFireAlt, FaTv, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
-const MobilemenuItems = [
-    {
-        page: "Home",
-        linkto: "/",
-        logo: <BiHome />
-    },
-    {
-        page: "Trending",
-        linkto: "/trending",
-        logo: <FaFireAlt />
-    },
-    {
-        page: "Movies",
-        linkto: "/movies",
-        logo: <ImFilm />
-    },
-    {
-        page: "TV Series",
-        linkto: "/tvseries",
-        logo: <FaTv />
-    },
-    {
-        page: "Search",
-        linkto: "/search",
-        logo: <FaSearch />
-    },
-]
+import { NavBarData } from '../../data/NavbarData/NavBarData';
 
 const MobileMenu = () => {
   return (
     <div>
-        <ul className=' absolute top-[73px] right-0 grid sm:hidden bg-black bg-opacity-70 '>
-            {MobilemenuItems.map((item) => (
+        <ul className=' absolute top-[80px] right-0 grid sm:hidden bg-black bg-opacity-80 '>
+            {NavBarData.map((item) => (
             <li key={item.page} className=' p-3 hover:bg-white hover:text-black '>
-                <Link to={item.linkto} className=' flex '>
+                <Link to={item.linkto} className=' flex items-baseline gap-2 '>
+                  <>
                     {item.logo}
+                  </>
+                  <>
                     {item.page}
+                  </>
                 </Link>
             </li>    
             ))}

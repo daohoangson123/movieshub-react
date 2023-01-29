@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaFilm } from 'react-icons/fa';
 import Mobilemenu from './Mobilemenu';
 import Navbar from './Navbar';
 
@@ -37,13 +36,17 @@ const mq = window.matchMedia('(min-width: 640px)');
 
   return (
     <div className='Header flex items-center justify-between sm:justify-start gap-2 p-2 bg-zinc-700 '>
-        <div className='Logo font-black flex gap-2 p-2 '>
-            <FaFilm className=' text-[30px] text-orange-500 translate-y-[-3px] ' />
-            MoviesHub
+        <div className='Logo flex items-baseline gap-2 p-2 text-[30px] font-black '>
+            <i class=' text-orange-500 
+                fa-solid fa-film '>
+            </i>
+            <h1 className=''>
+                MoviesHub
+            </h1>
         </div>
         <nav className='Navbar '>
             <Navbar />
-            <button className='MenuBtn sm:hidden p-4 hover:bg-white hover:text-black '
+            <button className='MenuBtn sm:hidden text-[20px] p-4 hover:bg-white hover:text-black rounded-md '
                 onClick={handleOnclick}
             >
                 Menu

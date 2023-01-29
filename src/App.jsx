@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 const App = () => {
   return (
     <div className='App relative min-h-[100vh] bg-black text-white '>
-      <div className='Header sticky top-0 z-50 '>
+      <div className='Header sticky top-0 z-50 row-span-1 '>
         <Header />
       </div>
       <div className='Main my-[30px] '>

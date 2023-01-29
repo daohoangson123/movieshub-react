@@ -1,7 +1,6 @@
 import React from 'react';
 // import React, { useState } from 'react';
 // import { Movies_Data } from '../../../data/MoviesData/MoviesData';
-import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Search() {
@@ -92,7 +91,9 @@ return (
                 <button type='button' className='SearchBtn flex gap-2 hover:bg-white hover:bg-opacity-10 rounded p-2 '
                 // onClick={handleOnclick}
                 >
-                    <FaSearch className=' text-[1.3rem] text-green-600 ' />
+                    <i className=' text-[1.3rem] text-green-600
+                      fa-solid fa-magnifying-glass '>
+                    </i>
                     <Link to='/search'>
                       Search
                     </Link>

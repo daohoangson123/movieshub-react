@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BiCopyright } from 'react-icons/bi';
 
 const FooterTopItems = [
   {
@@ -39,7 +38,9 @@ export default function Footer() {
         </div>
         <hr className=' mx-20 ' />
         <div className='FooterBot flex justify-center gap-1 p-5 '>
-          <BiCopyright className=' text-[20px] translate-y-[2px] ' />
+          <i className=' text-[20px] translate-y-[2px] 
+            fa-regular fa-copyright '>
+          </i>
           CopyRight by ...
         </div>
     </div>

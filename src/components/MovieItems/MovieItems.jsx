@@ -19,7 +19,7 @@ const MovieItems = ({ id, title, thumbnail}) => {
             </div>
             <button className='MovieDetailLink font-semibold p-2 rounded-sm hover:text-black hover:bg-gray-300'>
                 <Link to={`/watch/${id}`}>
-                    Watch Now!
+                    More info...
                 </Link>
             </button>
         </div>

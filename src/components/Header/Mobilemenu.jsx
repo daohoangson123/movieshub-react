@@ -9,12 +9,12 @@ const MobileMenu = () => {
             {NavBarData.map((item) => (
             <li key={item.page} className=' p-3 hover:bg-white hover:text-black '>
                 <Link to={item.linkto} className=' flex items-baseline gap-2 '>
-                  <>
+                  <div>
                     {item.logo}
-                  </>
-                  <>
+                  </div>
+                  <div>
                     {item.page}
-                  </>
+                  </div>
                 </Link>
             </li>    
             ))}

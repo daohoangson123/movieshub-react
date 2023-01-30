@@ -20,7 +20,7 @@ const MainTVes = () => {
         <div className='TVMoviesBox flex flex-wrap justify-center gap-10 p-5 '>
             {tvdetail.map((tvitem) => (
               <MovieItems
-                key={tvitem.idid}
+                key={tvitem.id}
                 id={tvitem.id}
                 title={tvitem.title}
                 thumbnail={tvitem.thumbnail}

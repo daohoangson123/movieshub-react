@@ -37,7 +37,7 @@ const mq = window.matchMedia('(min-width: 640px)');
   return (
     <div className='Header flex items-center justify-between sm:justify-start gap-2 p-2 bg-zinc-700 '>
         <div className='Logo flex items-baseline gap-2 p-2 text-[30px] font-black '>
-            <i class=' text-orange-500 
+            <i className=' text-orange-500 
                 fa-solid fa-film '>
             </i>
             <h1 className=''>

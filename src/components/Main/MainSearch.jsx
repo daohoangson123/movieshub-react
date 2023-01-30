@@ -27,42 +27,42 @@ const MainSearch = () => {
 
     const HandleOnKeyUp = (event) => {
         for (let i = 0; i < Movies_Data.length; i++) {
-            if (Object.values(searchValue)[0] === "") {
+            if (Object.values(searchValue) === "") {
                     Setres([
                         ...Movies_Data
                     ]);
-                } else if ((event.key !== "Enter")
+                    break; 
+                    } else if ((event.key !== "Enter" && event.key !== "Shift")
                         &&
-                        (Movies_Data[i].title
-                        .replace(/\s+/g, '')
-                        .toLocaleLowerCase()
-
-                        .includes(Object.values(searchValue)[0]
-                        .replace(/\s+/g, '')
-                        .toLocaleLowerCase()))) {
-                            res.push(Movies_Data[i]);
-                            Setres([...res])
+                            (Movies_Data[i].title
+                            .replace(/\s+/g, '')
+                            .toLocaleLowerCase()
+        
+                            .includes(Object.values(searchValue)[0]
+                            .replace(/\s+/g, '')
+                            .toLocaleLowerCase()))) {
+                                res.push(Movies_Data[i]);
+                                Setres([...res]);
                         }
         };
     }
-    
+
     const HandleOnClick = () => {
         for (let i = 0; i < Movies_Data.length; i++) {
-            if((Object.values(searchValue)[0] === "")) {
+            if (Object.values(searchValue)[0] === "") {
                     alert("please enter letters of movie name");
                     break;
-                } else if (
-                        !(Movies_Data[i].title
-                        .replace(/\s+/g, '')
-                        .toLocaleLowerCase()
-                        
-                        .includes(Object.values(searchValue)[0]
-                        .replace(/\s+/g, '')
-                        .toLocaleLowerCase()))) {
-                        alert("404! NOTHING FOUND");
-                        break;
-                }
-            }
+                } else if((Movies_Data[i].title
+                    .replace(/\s+/g, '')
+                    .toLocaleLowerCase()
+                    
+                    .includes(Object.values(searchValue)[0]
+                    .replace(/\s+/g, '')
+                    .toLocaleLowerCase()))) {
+                        // res.push(Movies_Data[i]);
+                        // Setres([...res])
+                    }
+        }
     }
 
     useEffect(() => {
@@ -85,9 +85,6 @@ const MainSearch = () => {
                         Search
                     </button>
             </form>
-            <div className=' text-center '>
-                Try some letters/ words of movie's name, the results will be shown below instantly
-            </div>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
                 {res.map((item) => (

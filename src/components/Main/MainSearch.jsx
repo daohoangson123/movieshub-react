@@ -19,8 +19,7 @@ const MainSearch = () => {
             [event.target.searchkw] : event.target.value,
         });
         
-        if ((Object.values(searchValue) === "")
-                || (Object.values(searchValue)[0] !== res)) {
+        if (Object.values(searchValue)[0] !== res) {
                     Setres([]);
         }
     }
@@ -74,8 +73,9 @@ const MainSearch = () => {
             <form className='SearchForm m-2 flex gap-5 justify-center items-baseline '
                 action="" autoComplete='off'
                 onSubmit={HandleOnSubmit}    >
-                    <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required onChange={HandleOnChange}
+                    <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required
                     className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px] text-black rounded placeholder-stone-500 '
+                    onChange={HandleOnChange}
                     onKeyUp={HandleOnKeyUp}
                     />
                     <button type='button' className='MainSearchBtn flex gap-2 hover:bg-white hover:bg-opacity-10 rounded p-2 '

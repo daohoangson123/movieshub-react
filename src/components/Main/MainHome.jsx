@@ -24,7 +24,6 @@ const MainHome = () => {
                 key={movie.id}
                 id={movie.id}
                 title={movie.title}
-                titlesub={movie.titlesub}
                 thumbnail={movie.thumbnail}
               />
             ))}

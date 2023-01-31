@@ -43,6 +43,7 @@ const MainSearch = () => {
                             .toLocaleLowerCase()))) {
                                 res.push(Movies_Data[i]);
                                 Setres([...res]);
+                                console.log(res);
                         }
         };
     }

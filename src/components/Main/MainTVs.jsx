@@ -28,6 +28,7 @@ const MainTVes = () => {
                 id={tvitem.id}
                 title={tvitem.title}
                 thumbnail={tvitem.thumbnail}
+                rate={tvitem.rating}
               />
             ))}
         </div>

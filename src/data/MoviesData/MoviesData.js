@@ -35,7 +35,9 @@ export const Movies_Data = [
         Trong phim, các thành viên còn sống sót của nhóm Avengers cùng các đồng minh hợp tác với nhau để đảo ngược lại những hậu quả mà Thanos đã gây ra
         trong Avengers: Cuộc chiến vô cực.`,
         thumbnail: thumb1,
-        type: "movie"
+        type: "movie",
+        rating: 8.4,
+        trending: 2018,
     },
     {
         id: "id2",
@@ -53,7 +55,9 @@ export const Movies_Data = [
         DVD bản mở rộng đặc biệt ra mắt vào 12 thắng 10 năm 2002. Năm 2007, The Lord of the Rings: The Fellowship of the Ring được Viện phim Mỹ (American Film Institute)
         bầu chọn ở vị trí thứ 50 trong 100 phim Mỹ hay nhất mọi thời đại.`,
         thumbnail: thumb2,
-        type: "movie"
+        type: "movie",
+        rating: 8.8,
+        trending: 2001,
     },
     {
         id: "id3",
@@ -71,7 +75,9 @@ export const Movies_Data = [
         và hiện tại đang là bộ phim có doanh thu đứng thứ 22 trong những bộ phim có doanh thu cao nhất thời đại.
         Bộ phim đạt được 2 giải thưởng của Viện Hàn lâm.`,
         thumbnail: thumb3,
-        type: "movie"
+        type: "movie",
+        rating: 8.8,
+        trending: 2002,
     },
     {
         id: "id4",
@@ -91,7 +97,9 @@ export const Movies_Data = [
         và cũng là lần đầu tiên và duy nhất một phim giả tưởng giành được giải Oscar cho Phim hay nhất.
         Đây cũng là bộ phim có doanh thu cao nhất năm 2003.`,
         thumbnail: thumb4,
-        type: "movie"
+        type: "movie",
+        rating: 9,
+        trending: 2003,
     },
     {
         id: "id5",
@@ -104,7 +112,9 @@ export const Movies_Data = [
         Phim tập trung vào quá trình biến đổi của cậu con trai út Michael Corleone (Pacino),
         từ một người ngoài gia đình bất đắc dĩ trở thành trùm mafia tàn nhẫn.`,
         thumbnail: thumb5,
-        type: "movie"
+        type: "movie",
+        rating: 9.2,
+        trending: 1972,
     },
     {
         id: "id6",
@@ -122,7 +132,9 @@ export const Movies_Data = [
         video gia đình, và DVD. Bộ phim này tiếp tục được hoan nghênh bởi những nhà bình luận và khán giả,
         kể cả sau 14 năm từ khi được phát hành đầu tiên, và thường được xếp vào hạng một trong những phim vĩ đại nhất mọi thời đại.`,
         thumbnail: thumb6,
-        type: "movie"
+        type: "movie",
+        rating: 9.3,
+        trending: 1994,
     },
     {
         id: "id7",
@@ -137,7 +149,9 @@ export const Movies_Data = [
         nhưng bộ ba bị đe dọa bởi một kẻ chủ mưu vô chính phủ có biệt danh Joker (Ledger),
         khi hắn tìm cách phá hoại ảnh hưởng của Batman và khiến thành phố trở nên hỗn loạn.`,
         thumbnail: thumb7,
-        type: "movie"
+        type: "movie",
+        rating: 9,
+        trending: 2008,
     },
     {
         id: "id8",
@@ -156,7 +170,9 @@ export const Movies_Data = [
         Đến năm 2007, 12 Angry Men được Thư viện Quốc hội Hoa Kỳ chọn lưu trữ vào Viện lưu trữ phim Quốc gia
         vì sự "quan trọng trong lĩnh vực văn hóa, Lịch sử, hay thẩm mỹ" của nó.`,
         thumbnail: thumb8,
-        type: "movie"
+        type: "movie",
+        rating: 9,
+        trending: 1957,
     },
     {
         id: "id9",
@@ -167,7 +183,9 @@ export const Movies_Data = [
         Nhân vật gây ấn tượng nhất trong phim là bác sĩ Hannibal Lecter do Anthony Hopkins thủ vai. Trong phim, Clarice Starling,
         một nữ học viên của trường huấn luyện đặc vụ FBI, đã phải đến xin lời khuyên của Lecter để bắt kẻ giết người hàng loạt có biệt danh là "Buffalo Bill".`,
         thumbnail: thumb9,
-        type: "movie"
+        type: "movie",
+        rating: 8.6,
+        trending: 1991,
     },
     {
         id: "id10",
@@ -181,7 +199,9 @@ export const Movies_Data = [
         Phim được quay tại California và Pennsylvania. Sau đó ra mắt tại Mỹ ngày 22 tháng 9 năm 1995. Đạt doanh thu 327 triệu đô la trên toàn thế giới,
         Se7en thành công về thương mại và nhận được rất nhiều đánh giá tích cực của giới phê bình.`,
         thumbnail: thumb10,
-        type: "movie"
+        type: "movie",
+        rating: 8.6,
+        trending: 1995,
     },
     {
         id: "id11",
@@ -197,7 +217,9 @@ export const Movies_Data = [
         nâng tổng số tập từ 706 đến 750. Mùa 33 đã công chiếu lần đầu vào 26 tháng 9 năm 2021. 
         Vào ngày 14 tháng 1 năm 2000, Gia đình Simpson đã được trao ngôi sao trên Đại lộ Danh vọng Hollywood.`,
         thumbnail: thumb11,
-        type: "TV"
+        type: "TV",
+        rating: 8.7,
+        trending: 1989,
     },
     {
         id: "id12",
@@ -229,7 +251,9 @@ export const Movies_Data = [
         cô là nữ diễn viên đầu tiên từng đảm nhận vai này. Doctor hiện tại do Jodie Whittaker thủ diễn,
         cô đã nhận lại vai này từ Doctor thứ mười hai do Peter Capaldi thủ vai, đã xuất hiện lần cuối trong tập Giáng sinh năm 2017, "Twice Upon a Time".`,
         thumbnail: thumb12,
-        type: "TV"
+        type: "TV",
+        rating: 8.6,
+        trending: 2005,
     },
     {
         id: "id13",
@@ -244,7 +268,9 @@ export const Movies_Data = [
         Các phim truyền hình Star Trek bao gồm The Original Series (loạt phim gốc),
         một loạt phim hoạt hình, 4 loạt phim truyền hình ăn theo, các phim điện ảnh và loạt phim truyền hình mới sẽ ra mắt trong năm 2017.`,
         thumbnail: thumb13,
-        type: "TV"
+        type: "TV",
+        rating: 7.9,
+        trending: 2009,
     },
     {
         id: "id14",
@@ -265,7 +291,9 @@ export const Movies_Data = [
         Bộ phim The X-files là bộ phim truyền hình dài tập nhất về đề tài khoa học viễn tưởng được biết đến tại Hoa Kỳ và được tạp chí TV Guide
         bình chọn ở vị trí thứ 37 trong các bộ phim hay nhất mọi thời đại.`,
         thumbnail: thumb14,
-        type: "TV"
+        type: "TV",
+        rating: 8.6,
+        trending: 2018,
     },
     {
         id: "id15",
@@ -283,7 +311,9 @@ export const Movies_Data = [
         Loạt phim này đã được bán ra trên hơn 200 lãnh thổ khác nhau trên khắp thế giới và nó đã truyền cảm hứng cho hai bộ phim điện ảnh và
         một số sản phẩm phụ và phim hoạt hình.`,
         thumbnail: thumb15,
-        type: "TV"
+        type: "TV",
+        rating: 8.6,
+        trending: 1995,
     },
     {
         id: "id16",
@@ -298,7 +328,9 @@ export const Movies_Data = [
         Phần thứ hai được phát hành vào ngày 21 tháng 6 năm 2019, trong khi phần thứ ba, cũng là phần cuối cùng, được phát hành vào ngày 27 tháng 6 năm 2020.
         Dark đã được giới phê bình ca ngợi nhiệt liệt vì sắc thái, hình ảnh, diễn xuất, nhạc nền, tham vọng và sự phức tạp của câu chuyện.`,
         thumbnail: thumb16,
-        type: "TV"
+        type: "TV",
+        rating: 8.7,
+        trending: 2020,
     },
     {
         id: "id17",
@@ -311,7 +343,9 @@ export const Movies_Data = [
         Tác phẩm có sự tham gia của dàn diễn viên bao gồm Winona Ryder, David Harbour, Finn Wolfhard, Millie Bobby Brown, Gaten Matarazzo,
         Caleb McLaughlin, Noah Schnapp, Sadie Sink, Natalia Dyer, Charlie Heaton, Joe Keery, Cara Buono và Dacre Montgomery.`,
         thumbnail: thumb17,
-        type: "TV"
+        type: "TV",
+        rating: 8.7,
+        trending: 2024,
     },
     {
         id: "d18",
@@ -329,7 +363,9 @@ export const Movies_Data = [
         Câu chuyện thứ hai là sự cố gắng đòi lại ngai vàng của người cháu cuối cùng thuộc triều đại cầm quyền đã bị lật đổ;
         câu chuyện thứ ba là những mối đe dọa của mùa đông sắp đến mang theo những sinh vật huyền thoại và những người du mục trong Man tộc của miền Bắc.`,
         thumbnail: thumb18,
-        type: "TV"
+        type: "TV",
+        rating: 9.2,
+        trending: 2019,
     },
     {
         id: "id19",
@@ -346,7 +382,9 @@ export const Movies_Data = [
         khi đoạn phỏng vấn cuối cùng có tên của những nhân vật đã xuất hiện tương ứng với những người lính thật.
         Phim do Tom Hanks và một số người khác làm đạo diễn.`,
         thumbnail: thumb19,
-        type: "TV"
+        type: "TV",
+        rating: 9.4,
+        trending: 2001,
     },
     {
         id: "id20",
@@ -355,7 +393,9 @@ export const Movies_Data = [
         là một bộ phim truyền hình dài tập của Mỹ thuộc đề tài chính kịch hình sự theo phong cách tân Viễn Tây do Vince Gilligan chế tác kiêm sản xuất. Tác phẩm chính thức lên sóng trên kênh AMC từ ngày 20 tháng 1 năm 2008 đến ngày 29 tháng 9 năm 2013, gồm 5 mùa với 62 tập phim. Breaking Bad lấy bối cảnh và được quay chủ yếu tại Albuquerque, New Mexico. Phim kể về câu chuyện của Walter White (Bryan Cranston), một giáo viên hóa học phổ thông bất đắc chí, gần như thất nghiệp, đang phải vật lộn với căn bệnh ung thư phổi giai đoạn ba. Để đảm bảo tài chính cho gia đình mình trước khi chết, Walter quyết định chọn con đường phạm pháp, hợp tác với cậu học trò cũ Jesse Pinkman (Aaron Paul) để điều chế và phân phối ma túy đá kết tinh, đồng thời phải né tránh hàng loạt mối nguy giữa thế giới tội phạm ngầm. Tựa đề của phim, theo nghĩa thông tục phía nam Hoa Kỳ có thể hiểu là "chuyển sang sống đời tội phạm".[9] Gillian đã khắc họa tính đặc trưng cho loạt phim của mình khi phơi bày hành trình biến chất của Walter White, từ một Mr.
         Chips nói năng nhẹ nhàng trở thành một Scarface thực thụ.`,
         thumbnail: thumb20,
-        type: "TV"
+        type: "TV",
+        rating: 9.5,
+        trending: 2013,
     },
     
 ]

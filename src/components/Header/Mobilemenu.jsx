@@ -7,8 +7,8 @@ const MobileMenu = () => {
     <div>
         <ul className=' absolute top-[80px] right-0 grid sm:hidden bg-black bg-opacity-80 '>
             {NavBarData.map((item) => (
-            <li key={item.page} className=' p-3 hover:bg-white hover:text-black '>
-                <Link to={item.linkto} className=' flex items-baseline gap-2 '>
+            <li key={item.page} className=' p-3 hover:bg-white hover:text-black hover:px-[50px] transition-all ease-in-out duration-700 '>
+                <Link to={item.linkto} className=' flex justify-end items-baseline gap-2 '>
                   <div>
                     {item.logo}
                   </div>

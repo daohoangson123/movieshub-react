@@ -16,17 +16,24 @@ const MainMovies = () => {
   }, []);
   
   return (
-    <div className='Main text-center overflow-hidden '>
-        <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
-            {moviedetail.map((movie) => (
-              <MovieItems
-                key={movie.id}
-                id={movie.id}
-                title={movie.title}
-                thumbnail={movie.thumbnail}
-              />
-            ))}
-        </div>
+    <div className='MainMovies text-center overflow-hidden '>
+      <h2 className=' text-6xl text-center '>
+        Movies
+      </h2>
+      <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
+      <div className='Main text-center overflow-hidden '>
+          <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
+              {moviedetail.map((movie) => (
+                <MovieItems
+                  key={movie.id}
+                  id={movie.id}
+                  title={movie.title}
+                  thumbnail={movie.thumbnail}
+                  rate={movie.rating}
+                />
+              ))}
+          </div>
+      </div>
     </div>
   )
 }

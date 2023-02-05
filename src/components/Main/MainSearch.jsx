@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
-import { FaSearch } from 'react-icons/fa';
 import MovieItems from '../MovieItems/MovieItems';
+
+const MiniItems = {
+        width: "220px",
+        height: "440px",
+        text: "12px"
+    }
 
 const MainSearch = () => {
 
@@ -17,7 +22,6 @@ const MainSearch = () => {
 
     const handleChange = (event) => {
         setSearchValue(event.target.value);
-        console.log(searchValue)
         
         if (searchValue !== result) {
             setResult([]);
@@ -25,11 +29,12 @@ const MainSearch = () => {
     }
 
     const handleKeyUp = (event) => {
+        const serchTemp = []
         for (let i = 0; i < Movies_Data.length; i++) {
             if (searchValue === "") {
                     setResult(Movies_Data);
                     break; 
-                    } else if ((event.key !== "Enter" && event.key !== "Shift")
+                } else if ((event.key !== "Enter" && event.key !== "Shift")
                         &&
                             (Movies_Data[i].title
                             .replace(/\s+/g, '')
@@ -37,49 +42,32 @@ const MainSearch = () => {
                             .includes(searchValue
                             .replace(/\s+/g, '')
                             .toLocaleLowerCase()))) {
-                                result.push(Movies_Data[i]);
-                                setResult([...result]);
+                                serchTemp.push(Movies_Data[i]);
+                                setResult(serchTemp);
                         }
         };
     }
 
-    const handleClick = () => {
-        for (let i = 0; i < Movies_Data.length; i++) {
-            if (searchValue === "") {
-                    alert("please enter letters of movie's name");
-                    break;
-                } 
-                else if((Movies_Data[i].title
-                    .replace(/\s+/g, '')
-                    .toLocaleLowerCase()
-                    .includes(searchValue
-                    .replace(/\s+/g, '')
-                    .toLocaleLowerCase()))) {
-                        result.push(Movies_Data[i]);
-                        setResult(result);
-                    }
-        }
-    }
-
     return (
         <div className='MainSearch min-h-[70vh] '>
-            <form className='SearchForm m-2 flex gap-5 justify-center items-baseline '
+            <form className='SearchForm m-2 flex justify-center '
                 action="" autoComplete='off'
                 onSubmit={handleSubmit}    >
-                    <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required
+                <span className=' text-[20px]'>
+                    Type
+                    <i className="fa-solid fa-caret-right hidden sm:inline"></i>
+                </span>
+                <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name you want" required
                     className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px] border-none
-                    text-black rounded placeholder-stone-500
+                    text-black rounded placeholder-stone-500 text-center 
                     focus:invalid:outline-red-400 outline-green-400 '
                     onChange={handleChange}
                     onKeyUp={handleKeyUp}
-                    />
-                    <button type='button' className='MainSearchBtn flex gap-2 text-green-400 bg-white bg-opacity-20 
-                    hover:bg-white hover:bg-opacity-40 rounded p-2 '
-                    onClick={handleClick}
-                    >
-                        <FaSearch className=' text-[1.3rem] text-green-600 ' />
-                        Search
-                    </button>
+                />
+                <span className=' text-[20px]'>
+                    <i className="fa-solid fa-caret-left hidden sm:inline "></i>
+                    here
+                </span>
             </form>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
@@ -90,6 +78,9 @@ const MainSearch = () => {
                     title={item.title}
                     thumbnail={item.thumbnail}
                     rate={item.rating}
+                    width={MiniItems.width}
+                    height={MiniItems.height}
+                    text={MiniItems.text}
                     />
                 ))}
             </div>

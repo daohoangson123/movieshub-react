@@ -47,14 +47,14 @@ const MainTrending = () => {
   }, [])
   
   return (
-    <div className='MainTrending min-h-[70vh] '>
+    <div className='MainTrending '>
             <h2 className=' text-6xl text-center '>
               Trending
             </h2>
-            <button className=' m-3 p-1 bg-gray-500 '
+            <button className=' m-3 p-1 bg-gray-700 hover:bg-gray-500 '
               onClick={() => {
                 sort === "A-Z"
-                  ? setSort("Year Release")
+                  ? setSort("Year")
                     : setSort("A-Z")}}>
                   Currently sorting by {sort}
             </button>

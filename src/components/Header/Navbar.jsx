@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavBarData } from '../../data/NavbarData/NavBarData';
 
-const Navbar = () => {
 
+const Navbar = ({path}) => {
+    
   return (
     <div>
         <ul className='NavBarUl hidden sm:flex flex-wrap gap-5 '>

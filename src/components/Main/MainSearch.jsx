@@ -67,8 +67,9 @@ const MainSearch = () => {
                 action="" autoComplete='off'
                 onSubmit={handleSubmit}    >
                     <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name" required
-                    className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px]
-                    text-black rounded placeholder-stone-500 focus:invalid:outline-red-500 outline-green-600 '
+                    className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px] border-none
+                    text-black rounded placeholder-stone-500
+                    focus:invalid:outline-red-400 outline-green-400 '
                     onChange={handleChange}
                     onKeyUp={handleKeyUp}
                     />

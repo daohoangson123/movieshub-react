@@ -2,9 +2,14 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 export const Button = styled.div`
-position: fixed; 
-right: 20px;
+position: fixed;
+right: 5px;
 bottom: 20px;
+width: 35px;
+height: 35px;
+place-items: center;
+border: solid 1px white;
+border-radius: 50%;
 cursor: pointer;
 z-index: 1;
 `
@@ -34,9 +39,7 @@ const scrollToTop = () => {
 
 
     return (
-            <Button className='BackTopBtn place-items-center p-[10px] w-[40px] h-[40px]
-                    hover:bg-white hover:text-black rounded-full border-[1px]
-                    transition-all ease-in-out '
+            <Button className='BackTopBtn hover:text-black hover:bg-white bg-opacity-50 transition-all ease-in-out duration-300 '
                 onClick={scrollToTop} 
                 style={{display: visible ? 'grid' : 'none'}}>
                 <i className="fa-solid fa-turn-up"></i>

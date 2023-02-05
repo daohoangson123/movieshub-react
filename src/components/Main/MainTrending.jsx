@@ -56,7 +56,11 @@ const MainTrending = () => {
                 sort === "A-Z"
                   ? setSort("Year")
                     : setSort("A-Z")}}>
-                  Currently sorting by {sort}
+                  Currently sorting by: &nbsp;
+                  {sort === "A-Z"
+                    ? <i class="fa-solid fa-arrow-up-z-a">Name</i>
+                      : <i class="fa-solid fa-arrow-up-9-1">Year</i>
+                  }
             </button>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>

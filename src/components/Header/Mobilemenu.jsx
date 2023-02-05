@@ -4,15 +4,17 @@ import { NavBarData } from '../../data/NavbarData/NavBarData';
 
 const MobileMenu = () => {
   return (
-    <div>
-        <ul className=' absolute top-[80px] right-0 grid sm:hidden bg-black bg-opacity-80 '>
+    <div className='MobileMenu'>
+        <ul className=' absolute top-[77px] right-0 w-[100vw] grid sm:hidden '>
             {NavBarData.map((item) => (
-            <li key={item.page} className=' p-3 hover:bg-white hover:text-black hover:px-[50px] transition-all ease-in-out duration-700 '>
+            <li key={item.page} className=' p-3 hover:px-[50px] bg-stone-800 bg-opacity-70
+            hover:bg-white hover:text-black hover:font-black
+              transition-all ease-in-out duration-500 '>
                 <Link to={item.linkto} className=' flex justify-end items-baseline gap-2 '>
-                  <div>
+                  <div className=''>
                     {item.logo}
                   </div>
-                  <div>
+                  <div className=''>
                     {item.page}
                   </div>
                 </Link>

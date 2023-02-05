@@ -47,7 +47,7 @@ const mq = window.matchMedia('(min-width: 640px)');
     };
 
     return (
-        <div className='Header flex items-center justify-between sm:justify-start gap-2 p-2 bg-zinc-700 '>
+        <div className='Header flex items-center justify-between sm:justify-start sm:gap-2 p-2 bg-zinc-700 '>
             <div className='Logo flex items-baseline gap-2 p-2 text-[30px] font-black '>
                 <i className=' text-orange-500 
                     fa-solid fa-film '>
@@ -58,7 +58,7 @@ const mq = window.matchMedia('(min-width: 640px)');
             </div>
             <nav className='Navbar '>
                 <Navbar />
-                <button className='MenuBtn sm:hidden text-[20px] p-4 hover:bg-white hover:text-black rounded-sm '
+                <button className='MenuBtn sm:hidden text-[18px] p-3 hover:bg-white hover:text-black rounded-sm '
                     onClick={handleOnclick} style={{background: menubg, color: menutext}}
                 >
                     Menu

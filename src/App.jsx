@@ -8,8 +8,10 @@ import MainTVes from './components/Main/MainTVs';
 import MainSearch from './components/Main/MainSearch';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
+import BackTopBtn from './components/BackToTop/BackTopBtn';
 
 const App = () => {
+
   return (
     <div className='App relative min-h-[100vh] bg-black text-white '>
       <div className='Header sticky top-0 z-50 row-span-1 '>
@@ -28,6 +30,7 @@ const App = () => {
       <div className='Footer '>
         <Footer />
       </div>
+      <BackTopBtn />
     </div>
   );
 }

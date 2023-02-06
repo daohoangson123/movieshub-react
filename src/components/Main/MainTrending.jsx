@@ -58,8 +58,8 @@ const MainTrending = () => {
                     : setSort("A-Z")}}>
                   Currently sorting by: &nbsp;
                   {sort === "A-Z"
-                    ? <i class="fa-solid fa-arrow-up-z-a">Name</i>
-                      : <i class="fa-solid fa-arrow-up-9-1">Year</i>
+                    ? <i className="fa-solid fa-arrow-up-z-a">Name</i>
+                      : <i className="fa-solid fa-arrow-up-9-1">Year</i>
                   }
             </button>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />

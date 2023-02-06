@@ -1,10 +1,5 @@
 export const NavBarData = [
     {
-        page: "Home",
-        linkto: "/",
-        logo: <i className="fa-solid fa-house "></i>,
-    },
-    {
         page: "Trending",
         linkto: "/trending",
         logo: <i className="fa-solid fa-fire"></i>,

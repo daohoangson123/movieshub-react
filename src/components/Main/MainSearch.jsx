@@ -5,7 +5,7 @@ import MovieItems from '../MovieItems/MovieItems';
 const MiniItems = {
         width: "220px",
         height: "440px",
-        text: "12px"
+        text: "14px"
     }
 
 const MainSearch = () => {
@@ -53,23 +53,24 @@ const MainSearch = () => {
             <form className='SearchForm m-2 flex justify-center '
                 action="" autoComplete='off'
                 onSubmit={handleSubmit}    >
-                <span className=' text-[20px]'>
-                    Type
-                    <i className="fa-solid fa-caret-right hidden sm:inline"></i>
-                </span>
-                <input type="text" name="searchkw" id="searchkw" placeholder="Movie's name you want" required
+                <input type="text" name="searchkw" id="searchkw" placeholder="Enter your movie's name" required
                     className='MainSearchInp px-3 min-w-[180px] w-[280px] h-[30px] border-none
                     text-black rounded placeholder-stone-500 text-center 
                     focus:invalid:outline-red-400 outline-green-400 '
                     onChange={handleChange}
                     onKeyUp={handleKeyUp}
                 />
-                <span className=' text-[20px]'>
-                    <i className="fa-solid fa-caret-left hidden sm:inline "></i>
-                    here
-                </span>
             </form>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
+            <div className='Error text-center '>
+                {result.length === 0
+                ?   <div>
+                        <span>Nothing found </span>
+                        <i className="fa-regular fa-face-sad-tear text-[30px]"></i>
+                        <span> please try again</span>
+                    </div>
+                : null}
+            </div>
             <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
                 {result.map((item) => (
                     <MovieItems

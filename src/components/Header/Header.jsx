@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Mobilemenu from './Mobilemenu';
 import Navbar from './Navbar';
 
@@ -48,14 +49,16 @@ const mq = window.matchMedia('(min-width: 640px)');
 
     return (
         <div className='Header flex items-center justify-between sm:justify-start sm:gap-2 p-2 bg-zinc-700 '>
-            <div className='Logo flex items-baseline gap-2 p-2 text-[30px] font-black '>
-                <i className=' text-orange-500 
-                    fa-solid fa-film '>
-                </i>
-                <h1 className=''>
-                    MoviesHub
-                </h1>
-            </div>
+            <Link to="/">
+                <div className='Logo flex items-baseline gap-2 p-2 text-[30px] font-black '>
+                    <i className=' text-orange-500 
+                        fa-solid fa-film '>
+                    </i>
+                    <h1 className=''>
+                        MoviesHub
+                    </h1>
+                </div>
+            </Link>
             <nav className='Navbar '>
                 <Navbar />
                 <button className='MenuBtn sm:hidden text-[18px] p-3 hover:bg-white hover:text-black rounded-sm '

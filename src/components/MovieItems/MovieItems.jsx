@@ -5,15 +5,16 @@ const MovieItems = ({id, title, thumbnail, rate, ...props}) => {
   return (
     <div className='MovieItems w-[250px] h-[500px] ' style={{width: props.width, height: props.height, fontSize: props.text}}>
         <div className='MovieThumbCtrl overflow-hidden h-[70%] 
-          border-solid border-[2px] border-b-0 border-gray-300 rounded-t-lg '>
+          border-solid border-2 border-b-0 border-gray-300 rounded-t-lg '>
           <img src={thumbnail} alt={title} className=' transition-all ease-in-out duration-700
-          hover:scale-105 hover:brightness-150 ' />
+            hover:scale-105 opacity-60 hover:opacity-100 hover:brightness-110 ' />
         </div>
         <div className='MovieTextsCtrl h-[130px] text-center p-2
-        border-solid border-[2px] border-t-0 border-gray-300 rounded-b-lg '>
-            <div className='MovieTitle text-[16px] font-bold '>
+          border-solid border-[2px] border-t-0 border-gray-300 rounded-b-lg '>
+            <div className='MovieTitle text-[16px] font-bold'>
                 {title}
             </div>
+            <hr />
             <div className='Rating m-1 '>
               Rating: {rate}/10
             </div>

@@ -10,6 +10,7 @@ import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
 import BackTopBtn from './components/BackToTop/BackTopBtn';
 
+
 const App = () => {
 
   return (

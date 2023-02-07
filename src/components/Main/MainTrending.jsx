@@ -44,6 +44,14 @@ const MainTrending = () => {
     const SortedYear = YearSort.map((value) => Movies_Data[value.index]);
     setYearsort(SortedYear);
 
+    const handleContextmenu = e => {
+      e.preventDefault()
+  }
+  document.addEventListener('contextmenu', handleContextmenu)
+  return function cleanup() {
+      document.removeEventListener('contextmenu', handleContextmenu)
+  }
+
   }, [])
   
   return (

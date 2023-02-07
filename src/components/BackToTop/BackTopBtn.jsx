@@ -39,7 +39,7 @@ const scrollToTop = () => {
 
 
     return (
-            <Button className='BackTopBtn hover:text-black hover:bg-white bg-opacity-50 transition-all ease-in-out duration-300 '
+            <Button className='BackTopBtn hover:animate-pulse hover:text-black hover:bg-white bg-opacity-50 transition-all ease-in-out duration-300 '
                 onClick={scrollToTop} 
                 style={{display: visible ? 'grid' : 'none'}}>
                 <i className="fa-solid fa-turn-up"></i>

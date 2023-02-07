@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
@@ -17,7 +17,8 @@ const MainSearch = () => {
     // const [searchValue, setSearchValue] = useState({
     //     searchkw: "",
     // });
-    const [searchValue, setSearchValue] = useState("");
+    
+    const [searchValue, setSearchValue] = useState("string");
     const [result, setResult] = useState(Movies_Data);
 
     const handleChange = (event) => {
@@ -25,18 +26,16 @@ const MainSearch = () => {
         
         if (searchValue !== result) {
             setResult([]);
-        }
+        }    
     }
 
-    const handleKeyUp = (event) => {
+    useEffect(() => {
         const serchTemp = []
         for (let i = 0; i < Movies_Data.length; i++) {
             if (searchValue === "") {
                     setResult(Movies_Data);
                     break; 
-                } else if ((event.key !== "Enter" && event.key !== "Shift")
-                        &&
-                            (Movies_Data[i].title
+                } else if ((Movies_Data[i].title
                             .replace(/\s+/g, '')
                             .toLocaleLowerCase()
                             .includes(searchValue
@@ -46,7 +45,7 @@ const MainSearch = () => {
                                 setResult(serchTemp);
                         }
         };
-    }
+    }, [searchValue])
 
     return (
         <div className='MainSearch min-h-[70vh] '>
@@ -58,7 +57,6 @@ const MainSearch = () => {
                     text-black rounded placeholder-stone-500 text-center 
                     focus:invalid:outline-red-400 outline-green-400 '
                     onChange={handleChange}
-                    onKeyUp={handleKeyUp}
                 />
             </form>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />

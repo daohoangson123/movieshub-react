@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
@@ -43,6 +43,14 @@ const MainTrending = () => {
 
     const SortedYear = YearSort.map((value) => Movies_Data[value.index]);
     setYearsort(SortedYear);
+
+    const handleContextmenu = e => {
+      e.preventDefault()
+  }
+  document.addEventListener('contextmenu', handleContextmenu)
+  return function cleanup() {
+      document.removeEventListener('contextmenu', handleContextmenu)
+  }
 
   }, [])
   

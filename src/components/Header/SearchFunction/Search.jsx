@@ -1,4 +1,3 @@
-import React from 'react';
 // import React, { useState } from 'react';
 // import { Movies_Data } from '../../../data/MoviesData/MoviesData';
 import { Link } from 'react-router-dom';

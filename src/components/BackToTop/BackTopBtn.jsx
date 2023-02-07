@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import styled from 'styled-components';
 
-export const Button = styled.div`
+export const BacktopButton = styled.div`
 position: fixed;
 right: 5px;
 bottom: 20px;
@@ -39,11 +39,11 @@ const scrollToTop = () => {
 
 
     return (
-            <Button className='BackTopBtn hover:animate-pulse hover:text-black hover:bg-white bg-opacity-50 transition-all ease-in-out duration-300 '
+            <BacktopButton className='BackTopBtn hover:animate-pulse hover:text-black hover:bg-white bg-opacity-50 transition-all ease-in-out duration-300 '
                 onClick={scrollToTop} 
                 style={{display: visible ? 'grid' : 'none'}}>
                 <i className="fa-solid fa-turn-up"></i>
-            </Button>
+            </BacktopButton>
     );
 }
 

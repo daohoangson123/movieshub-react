@@ -1,4 +1,3 @@
-import React, {} from 'react';
 import { Movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 import './MainHome.css'

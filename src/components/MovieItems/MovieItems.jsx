@@ -10,15 +10,15 @@ const MovieItems = ({id, title, thumbnail, rate, ...props}) => {
           <img src={thumbnail} alt={title} className='' />
         </div>
         <div className='MovieTextsCtrl h-[30.3%] text-center p-2 rounded-b-xl '>
-            <div className='MovieTitle text-[16px] font-bold'>
+            <div className='MovieTitle font-bold text-yellow-500 '>
                 {title}
             </div>
             <hr />
             <div className='Rating m-1 '>
               Rating: {rate}/10
             </div>
-            <button className='MovieDetailLink font-semibold p-1 rounded-md
-              group-hover:text-yellow-300 group-hover:bg-stone-700 duration-500 delay-300 '>
+            <button className='MovieDetailLink font-semibold p-1 rounded-sm
+              group-hover:text-black group-hover:bg-white duration-500 delay-300 '>
                 <Link to={`/watch/${id}`}>
                     More info
                 </Link>

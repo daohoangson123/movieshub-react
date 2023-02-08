@@ -14,38 +14,38 @@ const NavbarAlt = () => {
     const [isClicked4, setIsClicked4] = useState(false)
 
     const checkClick = {
-        backgroundColor: isClicked ? 'rgba(255 , 255 , 255, .5)' : null,
-        color: isClicked ? '#F94A29' : 'white',
+        backgroundColor: isClicked ? 'rgba(255 , 255 , 255, .7)' : null,
+        color: isClicked ? 'black' : 'white',
         borderRadius: '4px',
-        textDecoration: isClicked ? 'underline overline' : null,
+        textDecoration: isClicked ? 'underline' : null,
     };
     
     const checkClick1 = {
-        backgroundColor: isClicked1 ? 'rgba(255 , 255 , 255, .5)' : null,
-        color: isClicked1 ? '#FCE22A' : 'white',
+        backgroundColor: isClicked1 ? 'rgba(255 , 255 , 255, .7)' : null,
+        color: isClicked1 ? 'black' : 'white',
         borderRadius: '4px',
-        textDecoration: isClicked1 ? 'underline overline' : null,
+        textDecoration: isClicked1 ? 'underline' : null,
     };
     
     const checkClick2 = {
-        backgroundColor: isClicked2 ? 'rgba(255 , 255 , 255, .5)' : null,
-        color: isClicked2 ? '#16FF00' : 'white',
+        backgroundColor: isClicked2 ? 'rgba(255 , 255 , 255, .7)' : null,
+        color: isClicked2 ? 'black' : 'white',
         borderRadius: '4px',
-        textDecoration: isClicked2 ? 'underline overline' : null,
+        textDecoration: isClicked2 ? 'underline' : null,
     };
 
     const checkClick3 = {
-        backgroundColor: isClicked3 ? 'rgba(255 , 255 , 255, .5)' : null,
-        color: isClicked3 ? '#362FD9' : 'white',
+        backgroundColor: isClicked3 ? 'rgba(255 , 255 , 255, .7)' : null,
+        color: isClicked3 ? 'black' : 'white',
         borderRadius: '4px',
-        textDecoration: isClicked3 ? 'underline overline' : null,
+        textDecoration: isClicked3 ? 'underline' : null,
     };
 
     const checkClick4 = {
-        backgroundColor: isClicked4 ? 'rgba(255 , 255 , 255, .5)' : null,
-        color: isClicked4 ? '#C92C6D' : 'white',
+        backgroundColor: isClicked4 ? 'rgba(255 , 255 , 255, .7)' : null,
+        color: isClicked4 ? 'black' : 'white',
         borderRadius: '4px',
-        textDecoration: isClicked4 ? 'underline overline' : null,
+        textDecoration: isClicked4 ? 'underline' : null,
     };
 
     function handleClick() {
@@ -98,7 +98,7 @@ const NavbarAlt = () => {
         }
     }
 
-    const [menubg, setMenubg] = useState("");
+const [menubg, setMenubg] = useState("");
 const [menutext, setMenetext] = useState("");
 const [mobilemenuvisible, setMobilemenuvisible] = useState("none");
 
@@ -143,24 +143,24 @@ const mq = window.matchMedia('(min-width: 640px)');
 
     return (
     <div>
-        <ul className='NavBarUl hidden sm:flex flex-wrap gap-5 '>
+        <ul className='NavBarUl hidden sm:flex flex-wrap gap-2 '>
             <NavbarLi onClick={handleClick} style={checkClick}>
-                <Link to="/trending" className=' group flex items-baseline gap-1 rounded p-2
+                <Link to="/trending" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
                     hover:bg-white hover:bg-opacity-30 ' >
-                    <div className=' text-[24px] group-hover:text-red-500 ' >
+                    <div className=' text-[24px] ' >
                         <i className="fa-solid fa-fire "></i>
                     </div>
-                    <div className=' text-[20px] font-semibold '>
+                    <div className=' text-[20px] font-semibold ' >
                         Trending
                     </div>
                 </Link>
             </NavbarLi>
             <NavbarLi onClick={handleClick1} style={checkClick1}>
-                <Link to="/movies" className=' group flex items-baseline gap-1 rounded p-2
+                <Link to="/movies" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
                     hover:bg-white hover:bg-opacity-30 ' >
-                    <div className=' text-[24px] group-hover:text-yellow-300 ' >
+                    <div className=' text-[24px] ' >
                         <i className="fa-solid fa-clapperboard"></i>
                     </div>
                     <div className=' text-[20px] font-semibold '>
@@ -169,10 +169,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                 </Link>
             </NavbarLi>
             <NavbarLi onClick={handleClick2} style={checkClick2}>
-                <Link to="/TVseries" className=' group flex items-baseline gap-1 rounded p-2
+                <Link to="/TVseries" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
                     hover:bg-white hover:bg-opacity-30 ' >
-                    <div className=' text-[24px] group-hover:text-green-400 ' >
+                    <div className=' text-[24px] ' >
                         <i className="fa-solid fa-tv"></i>
                     </div>
                     <div className=' text-[20px] font-semibold '>
@@ -181,10 +181,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                 </Link>
             </NavbarLi>
             <NavbarLi onClick={handleClick3} style={checkClick3}>
-                <Link to="/search" className=' group flex items-baseline gap-1 rounded p-2
+                <Link to="/search" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
                     hover:bg-white hover:bg-opacity-30 ' >
-                    <div className=' text-[24px] group-hover:text-blue-700 ' >
+                    <div className=' text-[24px] ' >
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div className=' text-[20px] font-semibold '>
@@ -193,10 +193,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                 </Link>
             </NavbarLi>
             <NavbarLi onClick={handleClick4} style={checkClick4}>
-                <Link to="/API" className=' group flex items-baseline gap-1 rounded p-2
+                <Link to="/API" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
                     hover:bg-white hover:bg-opacity-30 ' >
-                    <div className=' text-[24px] group-hover:text-pink-400 ' >
+                    <div className=' text-[24px] ' >
                         <i className="fa-solid fa-link"></i>
                     </div>
                     <div className=' text-[20px] font-semibold '>

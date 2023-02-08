@@ -19,4 +19,9 @@ export const NavBarData = [
         linkto: "/search",
         logo: <i className="fa-solid fa-magnifying-glass"></i>,
     },
+    {
+        page: "API",
+        linkto: "/API",
+        logo: <i className="fa-solid fa-link"></i>,
+    },
 ]

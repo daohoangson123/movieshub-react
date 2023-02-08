@@ -9,6 +9,7 @@ import MainSearch from './components/Main/MainSearch';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
 import BackTopBtn from './components/BackToTop/BackTopBtn';
+import MainAPI from './components/Main/MainAPI';
 
 
 const App = () => {
@@ -20,11 +21,12 @@ const App = () => {
       </div>
       <div className='Main my-[30px] '>
         <Routes>
-          <Route path='/' element={<MainHome />} />
+          {/* <Route path='/' element={<MainHome />} /> */}
           <Route path='/trending' element={<MainTrending />} />
           <Route path='/movies' element={<MainMovies />} />
           <Route path='/tvseries' element={<MainTVes />} />
           <Route path='/search' element={<MainSearch />} />
+          <Route path='/API' element={<MainAPI />} />
           <Route path='/watch/:id' element={<MovieDetail />} />
         </Routes>
       </div>

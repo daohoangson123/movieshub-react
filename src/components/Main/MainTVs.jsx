@@ -17,9 +17,6 @@ const MainTVes = () => {
   
   return (
     <div className='Main text-center overflow-hidden '>
-      <h2 className=' text-6xl '>
-        TV Series
-      </h2>
       <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
         <div className='TVMoviesBox flex flex-wrap justify-center gap-10 p-5 '>
             {tvdetail.map((tvitem) => (

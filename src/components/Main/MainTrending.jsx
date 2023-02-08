@@ -56,42 +56,39 @@ const MainTrending = () => {
   
   return (
     <div className='MainTrending '>
-            <h2 className=' text-6xl text-center '>
-              Trending
-            </h2>
-            <button className=' m-3 p-1 bg-gray-700 hover:bg-gray-500 '
-              onClick={() => {
-                sort === "A-Z"
-                  ? setSort("Year")
-                    : setSort("A-Z")}}>
-                  Currently sorting by: &nbsp;
-                  {sort === "A-Z"
-                    ? <i className="fa-solid fa-arrow-up-z-a">Name</i>
-                      : <i className="fa-solid fa-arrow-up-9-1">Year</i>
-                  }
-            </button>
-            <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
-            <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
-                {sort === "A-Z"
-                ? namesort.map((item) => (
-                    <MovieItems
-                    key={item.id}
-                    id={item.id}
-                    title={item.title}
-                    thumbnail={item.thumbnail}
-                    rate={item.rating}
-                    />
-                  ))
-                : yearsort.map((item) => (
-                  <MovieItems
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  thumbnail={item.thumbnail}
-                  rate={item.rating}
-                  />
-                  ))}
-            </div>
+      <button className=' m-3 p-1 bg-gray-700 hover:bg-gray-500 '
+        onClick={() => {
+          sort === "A-Z"
+            ? setSort("Year")
+              : setSort("A-Z")}}>
+            Currently sorting by: &nbsp;
+            {sort === "A-Z"
+              ? <i className="fa-solid fa-arrow-up-z-a">Name</i>
+                : <i className="fa-solid fa-arrow-up-9-1">Year</i>
+            }
+      </button>
+      <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
+      <div className='MainSearchItems flex flex-wrap justify-center gap-10 p-5 '>
+          {sort === "A-Z"
+          ? namesort.map((item) => (
+              <MovieItems
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              thumbnail={item.thumbnail}
+              rate={item.rating}
+              />
+            ))
+          : yearsort.map((item) => (
+            <MovieItems
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            thumbnail={item.thumbnail}
+            rate={item.rating}
+            />
+            ))}
+      </div>
     </div>
   )
 }

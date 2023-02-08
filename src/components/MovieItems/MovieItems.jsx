@@ -17,8 +17,8 @@ const MovieItems = ({id, title, thumbnail, rate, ...props}) => {
             <div className='Rating m-1 '>
               Rating: {rate}/10
             </div>
-            <button className='MovieDetailLink font-semibold p-1 
-              group-hover:text-yellow-500 group-hover:bg-stone-500 duration-500 delay-300 '>
+            <button className='MovieDetailLink font-semibold p-1 rounded-md
+              group-hover:text-yellow-300 group-hover:bg-stone-700 duration-500 delay-300 '>
                 <Link to={`/watch/${id}`}>
                     More info
                 </Link>

@@ -21,7 +21,7 @@ const App = () => {
       </div>
       <div className='Main my-[30px] '>
         <Routes>
-          {/* <Route path='/' element={<MainHome />} /> */}
+          <Route path='/' element={<MainHome />} />
           <Route path='/trending' element={<MainTrending />} />
           <Route path='/movies' element={<MainMovies />} />
           <Route path='/tvseries' element={<MainTVes />} />

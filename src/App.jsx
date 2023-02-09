@@ -6,10 +6,11 @@ import MainTrending from './components/Main/MainTrending';
 import MainMovies from './components/Main/MainMovies';
 import MainTVes from './components/Main/MainTVs';
 import MainSearch from './components/Main/MainSearch';
-import MovieDetail from './components/MovieDetail/MovieDetail';
+import MainAPI from './components/Main/MainAPI';
 import Footer from './components/Footer/Footer';
 import BackTopBtn from './components/BackToTop/BackTopBtn';
-import MainAPI from './components/Main/MainAPI';
+import MovieDetail from './components/MovieDetail/MovieDetail';
+import APImovieDetail from './components/MovieDetail/APIMovieDetail';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route path='/search' element={<MainSearch />} />
           <Route path='/API' element={<MainAPI />} />
           <Route path='/watch/:id' element={<MovieDetail />} />
+          <Route path='/watchapi/:id' element={<APImovieDetail />} />
         </Routes>
       </div>
       <div className='Footer '>

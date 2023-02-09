@@ -8,7 +8,7 @@ const MovieDetail = () => {
     const [moviedetail, setMoviedetail] = useState('');
 
     useEffect(() => {
-        const movieDetailTemp = Movies_Data.find((movie) => movie.id === id);
+        const movieDetailTemp = Movies_Data.find((movie) => movie.id.toString() === id);
           setMoviedetail(movieDetailTemp);
     }, [id]);
 
@@ -18,7 +18,9 @@ const MovieDetail = () => {
 
   return (
     <div className='MovieDetailItems mx-3 '>
-        <div className=' text-3xl sm:text-5xl text-yellow-300 text-center font-black mb-2 '>{moviedetail.title}</div>
+        <div className=' text-3xl sm:text-5xl text-yellow-300 text-center font-black mb-2 '>
+          {moviedetail.title}
+        </div>
         <div className=' flex flex-wrap gap-5 '>
           <div className='relative mx-auto '>
             <img className='MovieDetailImg max-w-[250px] sm:max-w-[350px] max-h-[400px] 

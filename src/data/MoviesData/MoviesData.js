@@ -21,7 +21,7 @@ import thumb20 from "../../img/breakingbad.png";
 
 export const Movies_Data = [
     {
-        id: "id1",
+        id: 1,
         title: "Avengers: Infinity War",
         descript: `Avengers: Hồi kết (Avengers: Endgame)
         là phim điện ảnh siêu anh hùng Mỹ ra mắt năm 2019,

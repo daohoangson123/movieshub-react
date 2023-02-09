@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import APIMovieItems from '../MovieItems/APIMovieItems'
+import APIMovieItems from '../MovieItems/APIMovieItems';
 
 const MainAPI = () => {
     const [api, setApi] = useState([]);
@@ -17,16 +17,16 @@ const MainAPI = () => {
         <div className='MainAPI text-center overflow-hidden '>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
-            {api.map((movie) => (
-              <APIMovieItems className='MovieItems '
-                key={movie.id}
-                id={movie.id}
-                title={movie.title}
-                thumbnail={movie.poster_path}
-                rate={movie.vote_average}
-              />
-            ))}
-        </div>
+                {api.map((movie) => (
+                    <APIMovieItems className='MovieItems '
+                        key={movie.id}
+                        id={movie.id}
+                        title={movie.title}
+                        thumbnail={movie.poster_path}
+                        rate={movie.vote_average}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

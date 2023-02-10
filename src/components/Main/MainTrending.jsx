@@ -22,7 +22,12 @@ const MainTrending = () => {
       return 0;
     });
 
+    console.log(NameSort)
+
     const SortedName = NameSort.map((value) => Movies_Data[value.index]);
+
+    console.log(SortedName)
+    
     setNamesort(SortedName);
 
 //
@@ -43,14 +48,6 @@ const MainTrending = () => {
 
     const SortedYear = YearSort.map((value) => Movies_Data[value.index]);
     setYearsort(SortedYear);
-
-    const handleContextmenu = e => {
-      e.preventDefault()
-  }
-  document.addEventListener('contextmenu', handleContextmenu)
-  return function cleanup() {
-      document.removeEventListener('contextmenu', handleContextmenu)
-  }
 
   }, [])
   

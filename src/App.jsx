@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import MainHome from './components/Main/MainHome';
@@ -11,9 +11,21 @@ import Footer from './components/Footer/Footer';
 import BackTopBtn from './components/BackToTop/BackTopBtn';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import APImovieDetail from './components/MovieDetail/APIMovieDetail';
+import { useEffect } from "react";
 
 
 const App = () => {
+
+useEffect(() => {
+  //disable right-click
+  const handleContextmenu = e => {
+    e.preventDefault()
+  }
+  document.addEventListener('contextmenu', handleContextmenu)
+  return function cleanup() {
+      document.removeEventListener('contextmenu', handleContextmenu)
+  }
+}, [])
 
   return (
     <div className='App relative min-h-[100vh] bg-black text-white '>

@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
-export const NavbarLi = styled.li`
-    cursor: pointer;
-`
 const NavbarAlt = () => {
 
     const [isClicked, setIsClicked] = useState(false)
@@ -14,37 +10,32 @@ const NavbarAlt = () => {
     const [isClicked4, setIsClicked4] = useState(false)
 
     const checkClick = {
-        backgroundColor: isClicked ? 'rgba(255 , 255 , 255, .7)' : null,
+        backgroundColor: isClicked ? 'rgba(255 , 255 , 255, 1)' : null,
         color: isClicked ? 'black' : 'white',
-        borderRadius: '4px',
         textDecoration: isClicked ? 'underline' : null,
     };
     
     const checkClick1 = {
-        backgroundColor: isClicked1 ? 'rgba(255 , 255 , 255, .7)' : null,
+        backgroundColor: isClicked1 ? 'rgba(255 , 255 , 255, 1)' : null,
         color: isClicked1 ? 'black' : 'white',
-        borderRadius: '4px',
         textDecoration: isClicked1 ? 'underline' : null,
     };
     
     const checkClick2 = {
-        backgroundColor: isClicked2 ? 'rgba(255 , 255 , 255, .7)' : null,
+        backgroundColor: isClicked2 ? 'rgba(255 , 255 , 255, 1)' : null,
         color: isClicked2 ? 'black' : 'white',
-        borderRadius: '4px',
         textDecoration: isClicked2 ? 'underline' : null,
     };
 
     const checkClick3 = {
-        backgroundColor: isClicked3 ? 'rgba(255 , 255 , 255, .7)' : null,
+        backgroundColor: isClicked3 ? 'rgba(255 , 255 , 255, 1)' : null,
         color: isClicked3 ? 'black' : 'white',
-        borderRadius: '4px',
         textDecoration: isClicked3 ? 'underline' : null,
     };
 
     const checkClick4 = {
-        backgroundColor: isClicked4 ? 'rgba(255 , 255 , 255, .7)' : null,
+        backgroundColor: isClicked4 ? 'rgba(255 , 255 , 255, 1)' : null,
         color: isClicked4 ? 'black' : 'white',
-        borderRadius: '4px',
         textDecoration: isClicked4 ? 'underline' : null,
     };
 
@@ -111,7 +102,7 @@ const handleOnclick = () => {
 
     if(menubg === "") {
         setMenubg("white");
-        setMenetext("purple");
+        setMenetext("black");
     } else {
         setMenubg("");
         setMenetext("");
@@ -140,14 +131,13 @@ const mq = window.matchMedia('(min-width: 640px)');
     }
     };
 
-
     return (
     <div>
         <ul className='NavBarUl hidden sm:flex flex-wrap gap-2 '>
-            <NavbarLi onClick={handleClick} style={checkClick}>
                 <Link to="/trending" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
-                    hover:bg-white hover:bg-opacity-30 ' >
+                    hover:bg-white hover:bg-opacity-30 '
+                    onClick={handleClick} style={checkClick} >
                     <div className=' text-[24px] ' >
                         <i className="fa-solid fa-fire "></i>
                     </div>
@@ -155,11 +145,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                         Trending
                     </div>
                 </Link>
-            </NavbarLi>
-            <NavbarLi onClick={handleClick1} style={checkClick1}>
                 <Link to="/movies" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
-                    hover:bg-white hover:bg-opacity-30 ' >
+                    hover:bg-white hover:bg-opacity-30 '
+                    onClick={handleClick1} style={checkClick1} >
                     <div className=' text-[24px] ' >
                         <i className="fa-solid fa-clapperboard"></i>
                     </div>
@@ -167,11 +156,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                         Movies
                     </div>
                 </Link>
-            </NavbarLi>
-            <NavbarLi onClick={handleClick2} style={checkClick2}>
                 <Link to="/TVseries" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
-                    hover:bg-white hover:bg-opacity-30 ' >
+                    hover:bg-white hover:bg-opacity-30 '
+                    onClick={handleClick2} style={checkClick2} >
                     <div className=' text-[24px] ' >
                         <i className="fa-solid fa-tv"></i>
                     </div>
@@ -179,11 +167,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                         TV Series
                     </div>
                 </Link>
-            </NavbarLi>
-            <NavbarLi onClick={handleClick3} style={checkClick3}>
                 <Link to="/search" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
-                    hover:bg-white hover:bg-opacity-30 ' >
+                    hover:bg-white hover:bg-opacity-30 '
+                    onClick={handleClick3} style={checkClick3} >
                     <div className=' text-[24px] ' >
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
@@ -191,11 +178,10 @@ const mq = window.matchMedia('(min-width: 640px)');
                         Search
                     </div>
                 </Link>
-            </NavbarLi>
-            <NavbarLi onClick={handleClick4} style={checkClick4}>
                 <Link to="/API" className=' group flex items-baseline gap-1 rounded p-1
                     transition-all ease-in-out duration-500 
-                    hover:bg-white hover:bg-opacity-30 ' >
+                    hover:bg-white hover:bg-opacity-30 '
+                    onClick={handleClick4} style={checkClick4} >
                     <div className=' text-[24px] ' >
                         <i className="fa-solid fa-link"></i>
                     </div>
@@ -203,73 +189,72 @@ const mq = window.matchMedia('(min-width: 640px)');
                         API
                     </div>
                 </Link>
-            </NavbarLi>
         </ul>
 
         <div className='MobileMenu'>
-            <button className='MenuBtn sm:hidden text-[18px] font-bold p-3 hover:bg-white hover:text-black rounded-sm
+            <button className='MenuBtn sm:hidden font-bold p-2 hover:bg-white hover:text-black rounded-sm
                 transition-all ease-in-out duration-500 '
                 onClick={handleOnclick} style={{background: menubg, color: menutext}}
             >
                 Menu
             </button>
             <div className='MenuItems ' style={{display: mobilemenuvisible}}>
-                <ul className=' absolute top-[77px] left-0 w-full grid sm:hidden '>
-                    <NavbarLi onClick={handleClick} style={checkClick}
+                <ul className=' absolute top-[62px] left-0 w-full sm:hidden '>
+                    <li onClick={handleClick} style={checkClick}
                         className='group bg-stone-800 bg-opacity-70
                             hover:bg-white hover:bg-opacity-90
                                 transition-all ease-in-out duration-500'>
                         <Link to="/trending" className=' p-3 inline-block w-full
-                                hover:pr-[50px] text-right group-hover:text-black
+                                hover:pr-[50px] text-right group-hover:text-black group-hover:font-black
                                     transition-all ease-in-out duration-500 ' >
                                 <i className="fa-solid fa-fire mx-3 "></i>
                                 Trending
                         </Link>
-                    </NavbarLi>
-                    <NavbarLi onClick={handleClick1} style={checkClick1}
+                    </li>
+                    <li onClick={handleClick1} style={checkClick1}
                         className='group bg-stone-800 bg-opacity-70
                             hover:bg-white hover:bg-opacity-90
                                 transition-all ease-in-out duration-500'>
                         <Link to="/movies" className=' p-3 inline-block w-full
-                                hover:pr-[50px] text-right group-hover:text-black
+                                hover:pr-[50px] text-right group-hover:text-black group-hover:font-black
                                     transition-all ease-in-out duration-500 ' >
                                 <i className="fa-solid fa-clapperboard mx-3 "></i>
                                 Movies
                         </Link>
-                    </NavbarLi>
-                    <NavbarLi onClick={handleClick2} style={checkClick2}
+                    </li>
+                    <li onClick={handleClick2} style={checkClick2}
                         className='group bg-stone-800 bg-opacity-70
                             hover:bg-white hover:bg-opacity-90
                                 transition-all ease-in-out duration-500'>
                         <Link to="/TVseries" className=' p-3 inline-block w-full
-                                hover:pr-[50px] text-right group-hover:text-black
+                                hover:pr-[50px] text-right group-hover:text-black group-hover:font-black
                                     transition-all ease-in-out duration-500 ' >
                                 <i className="fa-solid fa-tv mx-3 "></i>
                                 TV Series
                         </Link>
-                    </NavbarLi>
-                    <NavbarLi onClick={handleClick3} style={checkClick3}
+                    </li>
+                    <li onClick={handleClick3} style={checkClick3}
                         className='group bg-stone-800 bg-opacity-70
                             hover:bg-white hover:bg-opacity-90
                                 transition-all ease-in-out duration-500'>
                         <Link to="/search" className=' p-3 inline-block w-full
-                                hover:pr-[50px] text-right group-hover:text-black
+                                hover:pr-[50px] text-right group-hover:text-black group-hover:font-black
                                     transition-all ease-in-out duration-500 ' >
                                 <i className="fa-solid fa-magnifying-glass mx-3 "></i>
                                 Search
                         </Link>
-                    </NavbarLi>
-                    <NavbarLi onClick={handleClick4} style={checkClick4}
+                    </li>
+                    <li onClick={handleClick4} style={checkClick4}
                         className='group bg-stone-800 bg-opacity-70
                             hover:bg-white hover:bg-opacity-90
                                 transition-all ease-in-out duration-500'>
                         <Link to="/API" className=' p-3 inline-block w-full
-                                hover:pr-[50px] text-right group-hover:text-black
+                                hover:pr-[50px] text-right group-hover:text-black group-hover:font-black
                                     transition-all ease-in-out duration-500 ' >
                                 <i className="fa-solid fa-link mx-3 "></i>
                                 API
                         </Link>
-                    </NavbarLi>
+                    </li>
                 </ul>
             </div>
         </div>

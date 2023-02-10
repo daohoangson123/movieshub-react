@@ -14,7 +14,7 @@ const MainAPI = () => {
     }, [])
 
     return (
-        <div className='MainAPI text-center overflow-hidden '>
+        <div className='MainAPI '>
             <hr className=' mx-auto my-2 w-[80%] border-orange-300 ' />
             <div className='MoviesBox flex flex-wrap justify-center gap-10 p-5 '>
                 {api.map((movie) => (

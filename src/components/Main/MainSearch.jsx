@@ -48,7 +48,7 @@ const MainSearch = () => {
     }, [searchValue])
 
     return (
-        <div className='MainSearch min-h-[70vh] '>
+        <div className='MainSearch '>
             <form className='SearchForm m-2 flex justify-center '
                 action="" autoComplete='off'
                 onSubmit={handleSubmit}    >

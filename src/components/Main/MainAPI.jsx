@@ -9,6 +9,7 @@ const MainAPI = () => {
             let fetchAPI = await fetch ("https://api.themoviedb.org/3/movie/now_playing?api_key=2edf9f02e088272f6ff2eab6bf5fa21a&language=en-US&page=1");
             let fetchedAPI = await fetchAPI.json();
             let results = fetchedAPI.results;
+            console.log(results);
             setApi(results);
         })();
     }, [])

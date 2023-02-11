@@ -22,12 +22,8 @@ const MainTrending = () => {
       return 0;
     });
 
-    console.log(NameSort)
-
     const SortedName = NameSort.map((value) => Movies_Data[value.index]);
 
-    console.log(SortedName)
-    
     setNamesort(SortedName);
 
 //

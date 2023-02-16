@@ -1,4 +1,4 @@
-export const NavBarData = [
+export const navBar_Data = [
     {
         page: "Trending",
         linkto: "/trending",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Movies_Data } from '../../data/MoviesData/MoviesData';
+import { movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
 const MiniItems = {
@@ -19,7 +19,7 @@ const MainSearch = () => {
     // });
     
     const [searchValue, setSearchValue] = useState("string");
-    const [result, setResult] = useState(Movies_Data);
+    const [result, setResult] = useState(movies_Data);
 
     const handleChange = (event) => {
         setSearchValue(event.target.value);
@@ -31,17 +31,17 @@ const MainSearch = () => {
 
     useEffect(() => {
         const serchTemp = []
-        for (let i = 0; i < Movies_Data.length; i++) {
+        for (let i = 0; i < movies_Data.length; i++) {
             if (searchValue === "") {
-                    setResult(Movies_Data);
+                    setResult(movies_Data);
                     break; 
-                } else if ((Movies_Data[i].title
+                } else if ((movies_Data[i].title
                             .replace(/\s+/g, '')
                             .toLocaleLowerCase()
                             .includes(searchValue
                             .replace(/\s+/g, '')
                             .toLocaleLowerCase()))) {
-                                serchTemp.push(Movies_Data[i]);
+                                serchTemp.push(movies_Data[i]);
                                 setResult(serchTemp);
                         }
         };

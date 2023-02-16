@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Movies_Data } from '../../data/MoviesData/MoviesData';
+import { movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
 const MainTVes = () => {
@@ -7,7 +7,7 @@ const MainTVes = () => {
 
   useEffect(() => {
     const tvDetailTemp = [];
-    Movies_Data.filter((tvitem) => {
+    movies_Data.filter((tvitem) => {
         if (tvitem.type === "TV") {
           tvDetailTemp.push(tvitem);
         }

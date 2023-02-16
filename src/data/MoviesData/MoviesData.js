@@ -19,7 +19,7 @@ import thumb18 from "../../img/got.jpg";
 import thumb19 from "../../img/bob.jpg";
 import thumb20 from "../../img/breakingbad.png";
 
-export const Movies_Data = [
+export const movies_Data = [
     {
         id: 1,
         title: "Avengers: Infinity War",

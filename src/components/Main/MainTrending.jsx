@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Movies_Data } from '../../data/MoviesData/MoviesData';
+import { movies_Data } from '../../data/MoviesData/MoviesData';
 import MovieItems from '../MovieItems/MovieItems';
 
 const MainTrending = () => {
-  const [namesort, setNamesort] = useState(Movies_Data);
+  const [namesort, setNamesort] = useState(movies_Data);
   const [yearsort, setYearsort] = useState();
   const [sort, setSort] = useState("A-Z");
 
   useEffect(() => {
-    const NameSort = Movies_Data.map((item, index) => {
+    const NameSort = movies_Data.map((item, index) => {
       return {index, value: item.title}
     });
 
@@ -22,13 +22,13 @@ const MainTrending = () => {
       return 0;
     });
 
-    const SortedName = NameSort.map((value) => Movies_Data[value.index]);
+    const SortedName = NameSort.map((value) => movies_Data[value.index]);
 
     setNamesort(SortedName);
 
 //
 
-    const YearSort = Movies_Data.map((item, index) => {
+    const YearSort = movies_Data.map((item, index) => {
       return {index, value: item.trending}
     });
 
@@ -42,7 +42,7 @@ const MainTrending = () => {
       return 0;
     });
 
-    const SortedYear = YearSort.map((value) => Movies_Data[value.index]);
+    const SortedYear = YearSort.map((value) => movies_Data[value.index]);
     setYearsort(SortedYear);
 
   }, [])

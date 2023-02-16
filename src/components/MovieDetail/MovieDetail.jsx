@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Movies_Data } from '../../data/MoviesData/MoviesData';
+import { movies_Data } from '../../data/MoviesData/MoviesData';
 import style from './MovieDetail.module.css'
 
 const MovieDetail = () => {
@@ -8,7 +8,7 @@ const MovieDetail = () => {
     const [moviedetail, setMoviedetail] = useState('');
 
     useEffect(() => {
-        const movieDetailTemp = Movies_Data.find((movie) => movie.id.toString() === id);
+        const movieDetailTemp = movies_Data.find((movie) => movie.id.toString() === id);
           setMoviedetail(movieDetailTemp);
     }, [id]);
 

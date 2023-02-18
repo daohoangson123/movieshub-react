@@ -12,6 +12,7 @@ import BackTopBtn from './components/BackToTop/BackTopBtn';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import APImovieDetail from './components/MovieDetail/APIMovieDetail';
 import { useEffect } from "react";
+import BackTopWrapper from "./components/BackToTop/BackTopWrapper";
 
 
 const App = () => {
@@ -33,16 +34,18 @@ useEffect(() => {
         <Header />
       </div>
       <div className='Main my-[30px] '>
-        <Routes>
-          <Route path='/' element={<MainHome />} />
-          <Route path='/trending' element={<MainTrending />} />
-          <Route path='/movies' element={<MainMovies />} />
-          <Route path='/tvseries' element={<MainTVes />} />
-          <Route path='/search' element={<MainSearch />} />
-          <Route path='/API' element={<MainAPI />} />
-          <Route path='/watch/:id' element={<MovieDetail />} />
-          <Route path='/watchapi/:id' element={<APImovieDetail />} />
-        </Routes>
+        <BackTopWrapper>
+          <Routes>
+            <Route path='/' element={<MainHome />} />
+            <Route path='/trending' element={<MainTrending />} />
+            <Route path='/movies' element={<MainMovies />} />
+            <Route path='/tvseries' element={<MainTVes />} />
+            <Route path='/search' element={<MainSearch />} />
+            <Route path='/API' element={<MainAPI />} />
+            <Route path='/watch/:id' element={<MovieDetail />} />
+            <Route path='/watchapi/:id' element={<APImovieDetail />} />
+          </Routes>
+        </BackTopWrapper>
       </div>
       <div className='Footer '>
         <Footer />
